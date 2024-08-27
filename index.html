@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Characters</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by character name...">
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="content-container">
+            <button id="left" class="nav-button">◀</button>
+            <div id="content"></div>
+            <button id="right" class="nav-button">▶</button>
+        </div>
+        <img id="loading" src="loading.gif" alt="Loading...">
+    </div>
+
+    <!-- Handlebars Template -->
+    <script id="character-template" type="text/x-handlebars-template">
+        <h1>{{name}}</h1>
+        <img src="{{image}}" alt="{{name}}" id="image" />
+        <p>{{description}}</p>
+        <div class="details">
+            <p>Ki: {{ki}}</p>
+            <p>Max Ki: {{maxKi}}</p>
+            <p>Race: {{race}}</p>
+            <p>Affiliation: {{affiliation}}</p>
+        </div>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="script.js"></script> 
+</body>
+</html>
